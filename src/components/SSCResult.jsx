@@ -4,13 +4,13 @@ import Footer from './Footer'
 function SSCResult() {
   return (
     <div className=''>
-    <div className='mt-25 m-auto p-5'>
+    <div data-aos='zoom-out' className='mt-25 m-auto p-5'>
 
         {/* Last Five Years   SSC Result */}
       <div>
        <h1 className='text-2xl font-bold my-4 '>Last Five Years   SSC Result</h1>
        <table className='text-center'>
-        <tr className='border bg-gray-100'>
+        <tr data-aos='fade-up' className='border bg-gray-100'>
             <th className='border py-1 px-4'>Years</th>
             <th className='border py-1 px-4'>Total <br /> Examinees</th>
             <th className='border py-1 px-4'>A+</th>
@@ -22,7 +22,7 @@ function SSCResult() {
             <th className='border py-1 px-4'>F</th>
             <th className='border py-1 px-4'>Passing <br /> Rate</th>
         </tr>
-        <tr>
+        <tr data-aos='fade-up'>
             <td className='border py-1 px-4'>2020</td>
             <td className='border py-1 px-4'>18</td>
             <td className='border py-1 px-4'>0</td>
@@ -34,7 +34,7 @@ function SSCResult() {
             <td className='border py-1 px-4'>6</td>
             <td className='border py-1 px-4'>67%</td>
         </tr>
-         <tr>
+         <tr data-aos='fade-up'>
             <td className='border py-1 px-4'>2021</td>
             <td className='border py-1 px-4'>20</td>
             <td className='border py-1 px-4'>0</td>
@@ -46,7 +46,7 @@ function SSCResult() {
             <td className='border py-1 px-4'>0</td>
             <td className='border py-1 px-4'>100%</td>
         </tr>
-         <tr>
+         <tr data-aos='fade-up'>
             <td className='border py-1 px-4'>2022</td>
             <td className='border py-1 px-4'>20</td>
             <td className='border py-1 px-4'>0</td>
@@ -58,7 +58,7 @@ function SSCResult() {
             <td className='border py-1 px-4'>2</td>
             <td className='border py-1 px-4'>90%</td>
         </tr>
-         <tr>
+         <tr data-aos='fade-up'>
             <td className='border py-1 px-4'>2023</td>
             <td className='border py-1 px-4'>20</td>
             <td className='border py-1 px-4'>0</td>
@@ -70,7 +70,7 @@ function SSCResult() {
             <td className='border py-1 px-4'>1</td>
             <td className='border py-1 px-4'>95%</td>
         </tr>
-         <tr>
+         <tr data-aos='fade-up'>
             <td className='border py-1 px-4'>2024</td>
             <td className='border py-1 px-4'>20</td>
             <td className='border py-1 px-4'>1</td>
@@ -87,7 +87,7 @@ function SSCResult() {
 
 
                 {/* মাদ্রাসার প্রস্তাবিত কমিটির তালিকা */}
-            <div>
+            <div data-aos='zoom-in'>
                 <h1 className='text-md font-bold my-4 mt-10'>আদাতলা দাখিল মাদ্রাসার প্রস্তাবিত কমিটির তালিকা</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -141,7 +141,7 @@ function SSCResult() {
 
 
                 {/* মোট জমির পরিমাণ  */}
-            <div>
+            <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>মোট জমির পরিমাণ</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -159,7 +159,7 @@ function SSCResult() {
 
 
                     {/* আসবাবপত্রের পরিমান */}
-                 <div>
+                 <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>আসবাবপত্রের পরিমান</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -212,7 +212,7 @@ function SSCResult() {
             </div>
 
                 {/* ভবনের তথ্য */}
-             <div>
+             <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>ভবনের তথ্য</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -239,7 +239,7 @@ function SSCResult() {
                </div>
 
                     {/* মাদরাসার কক্ষের বিবরণ */}
-               <div>
+               <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>মাদরাসার কক্ষের বিবরণ</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -276,7 +276,7 @@ function SSCResult() {
                </div>
 
                         {/* মাদরাসার পাঠাগার এর তথ্য */}
-               <div>
+               <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>মাদরাসার পাঠাগার এর তথ্য</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>
@@ -293,7 +293,7 @@ function SSCResult() {
              </div>
 
                     {/* মাদরাসার কম্পিউটার ল্যাব সম্পর্কিত তথ্য */}
-             <div>
+             <div data-aos='fade-up'>
                 <h1 className='text-md font-bold my-4 mt-10'>মাদরাসার কম্পিউটার ল্যাব সম্পর্কিত তথ্য</h1>
                      <table className='text-center'>
                      <tr className='border bg-gray-100'>

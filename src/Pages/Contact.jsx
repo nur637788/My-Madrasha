@@ -48,8 +48,8 @@ function Contact() {
         <h2 className=" text-4xl font-bold text-pink-800">Contact <span className='text-blue-600'>Us</span></h2>
       </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <form
+        <div  className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <form data-aos='zoom-in'
           onSubmit={handleSubmit}
           className="bg-gray-100 shadow-lg rounded-2xl p-6 space-y-4"
         >
@@ -99,7 +99,7 @@ function Contact() {
         )}
   
 
-      <div className="bg-gray-100 shadow-lg rounded-2xl p-6 space-y-4">
+      <div data-aos='zoom-in' className="bg-gray-100 shadow-lg rounded-2xl p-6 space-y-4">
            <h3 className="text-center">Contact info of</h3>
            <h1 className="font-bold">Adatala Darul Hedayat Dakhil Madrasha, Naogaon, Rajshahi</h1>
            <p>If you need address, email and phone number of Adatala Darul Hedayat Dakhil Madrasha, please feel free to contact them using the information below. Additionally, you can locate them on the map displayed on this webpage.</p>

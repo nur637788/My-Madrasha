@@ -7,9 +7,9 @@ function TecherCard({id, img, title, podobi, onClick }) {
       onClick={onClick}
       className="p-5 border rounded-xl shadow-md shadow-blue-900 cursor-pointer hover:shadow-lg transition">
 
-      <div>
-        <div className='w-40 h-40 m-auto'>
-            <img src={img} alt={title} className="w-full h-full  rounded-full" />
+      <div data-aos='zoom-in'>
+        <div  className='w-40 h-40 m-auto'>
+            <img data-aos='zoom-in' src={img} alt={title} loading='lazy' className="w-full h-full  rounded-full" />
         </div>
         <div className='text-center mt-5'>
             <h2 className="text-lg"><span className='font-bold'>ID:</span> {id}</h2>

@@ -81,7 +81,7 @@ const GetStart = () => {
 
   return (
     <div>
-    <div className="mb-20 mt-30 text-center font-bold text-2xl">
+    <div data-aos='zoom-in' className="mb-20 mt-30 text-center font-bold text-2xl">
       <h2>Gallary</h2>
     <div className="my-5 md:mx-50 relative w-cover h-60 md:h-[400px] overflow-hidden rounded-2xl border-2">
       {/* Slides */}

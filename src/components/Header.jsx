@@ -7,7 +7,7 @@ function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='fixed top-0 right-0 left-0 z-100  bg-gradient-to-l bg-pink-200 via-gray-100 from-pink-200 '>
+    <div data-aos='fade-down' className='fixed top-0 right-0 left-0 z-100  bg-gradient-to-l bg-pink-200 via-gray-100 from-pink-200 '>
       
       <div className='flex justify-between items-center px-4 py-2'>
         

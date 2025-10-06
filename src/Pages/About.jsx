@@ -13,14 +13,14 @@ function About() {
         <h2 className=" text-4xl font-bold text-pink-800">This <span className='text-blue-600'>About</span></h2>
       </header>
       <section>
-        <div className='md:max-w-6xl m-auto bg-blue-300 rounded p-5'>
-          <h2 className='text-center text-2xl font-bold'>Adatala Darul Hedayat Dakhil Madrasha</h2>
+        <div data-aos='fade-down' className='md:max-w-6xl m-auto bg-blue-300 rounded p-5'>
+          <h2  className='text-center text-2xl font-bold'>Adatala Darul Hedayat Dakhil Madrasha</h2>
           <p className='mt-3'>It is a <b>Non-government Madrasha</b>. This institute's EIIN number is <b>123808</b>. This institute is located in <b>Adatala 199, Naogaon, Rajshahi Division</b>. It's geographical area is <b>Plain Land</b>. It offers classes up to <b>Dakhil level</b>. Please refer to the table below for information on the EIIN, location, contact number, MPO status, and additional details.</p>
         </div>
 
 
 
-            <div className='mt-5'>
+            <div data-aos='fade-up' className='mt-5'>
               <h1 className='text-center text-3xl font-bold p-5'>Information At a Glance</h1>
             <table className='m-auto bg-gray-200/40'>
              <tr className="">
@@ -93,29 +93,28 @@ function About() {
       </section>
 
          <div className=' rounded-lg my-10 p-2 bg-gradient-to-t bg-blue-200 via-gray-800 from-blue-400 '>
-          <div className='border rounded-lg mb-4 p-5 bg-white'>
+          <div data-aos='fade-down' className='border rounded-lg mb-4 p-5 bg-white'>
             <h2 className='text-2xl text-center pb-2 text-amber-800'>History of the Organization</h2>
         <p className='text-center px-1 '>To spread Islamic education in the area, a meeting was held in the presence of respected people in the area at the initiative of local educationists in the presence of respected people in the area. In that meeting, the madrasa was established at its present location in 1994 with the tireless efforts of various people and received government recognition in 1998 as Adatola Dakhil Madrasa. Since the establishment of this madrasa till today, the Madrasa Management Committee formed at different times has fulfilled its responsibilities with skill and achieved overall development of the madrasa. It is mentioned that young students from various villages including <strong>Adatola, Jalsuka, Kawabhasha, Kariapara, Haripal, Purba Adatola</strong> come to receive lessons in this madrasa.</p>
           </div>
-        <div className='border rounded-lg mb-4 p-5 bg-white'>
+        <div data-aos='zoom-in' className='border rounded-lg mb-4 p-5 bg-white'>
             <h2 className='text-2xl text-center pb-2 text-amber-500'>Our Vision</h2>
         <p className='text-center px-1 '>At <i>Adatala Darul Hedayat Dakhil Madrasha</i>,our vision is to nurture students with the light of both Islamic teachings and modern education. We strive to build a generation enriched with knowledge, discipline, morality, and spirituality, who can contribute positively to society and serve as responsible citizens and true servants of Allah (SWT).</p>
           </div>
 
-          <div className='border rounded-lg  p-5 bg-white'>
+          <div data-aos='fade-up' className='border rounded-lg  p-5 bg-white'>
             <h2 className='text-2xl text-center pb-2 text-amber-700'>Our Mission</h2>
         <p className='text-center px-1 '><u>Adatala Darul Hedayat Dakhil Madrasha</u> 👉 our mission is to provide quality Islamic and modern education in a nurturing environment. We strive to build strong moral and spiritual values based on the Qur’an and Sunnah while ensuring academic excellence through dedicated teaching and guidance. Our goal is to develop responsible, ethical, and compassionate individuals who can contribute positively to society, and to prepare our students for both worldly success and eternal prosperity."</p>
         </div>
       </div>
 
-      <div>
-        <div className='my-10 w-full h-40 bg-blue-300 m-auto rounded'>
+          {/* Team Button */}
+        <div data-aos='zoom-in' className='my-10 w-full h-40 bg-blue-300 m-auto rounded'>
         <p className='pt-10 md:text-xl text-center'>
           Join Our Team
           with <br /> <br />
         <button onClick={()=>navigate('/nurdev')} className=' rounded-md bg-white px-10 py-2 hover:bg-blue-950 hover:text-white hover:font-bold transition'>Contact Us</button>
         </p>
-      </div>
     </div>
     </div>
 

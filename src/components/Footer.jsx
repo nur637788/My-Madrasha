@@ -8,8 +8,8 @@ import Teachers from './../Pages/Teachers';
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="bg-blue-100 py-3">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+    <footer className="bg-blue-100">
+      <div data-aos='fade-up' className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 px-6 py-5">
         {/* Left Section */}
         <div>
           <div className="flex items-center space-x-2">
@@ -44,14 +44,14 @@ const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h3 className="font-semibold mb-4">Useful Links</h3>
+          <h3 className="font-bold mb-4">Useful Links</h3>
           <ul className="space-y-2 text-sm text-gray-900 ">
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/')}>Home</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/about')}>About Us</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/teachers')}>Teachers</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/contact')}>Contact Us</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/login')}>Login</button></li>
-            <li className="hover:underline hover:font-bold text-black"><a href="https://nurprotfolio.netlify.app/contact" target="_blank">Team</a></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/about')} className="cursor-pointer">About Us</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/teachers')} className="cursor-pointer">Teachers</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/contact')} className="cursor-pointer">Contact Us</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/login')} className="cursor-pointer">Login</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/team')} className="cursor-pointer">Team</button></li>
+             <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/privacypolicy')} className="cursor-pointer">Privacy & Policy</button></li>
 
 
           </ul>
@@ -59,20 +59,20 @@ const Footer = () => {
 
         {/*  Categories */}
         <div>
-          <h3 className="font-semibold mb-4">Categories</h3>
+          <h3 className="font-bold mb-4">Categories</h3>
           <ul className="space-y-2 text-sm text-gray-900">
             <li className="hover:underline hover:font-bold text-black"><a href="https://nur637788protfolio.netlify.app/" target="_blank">Web Developer</a></li>
             <li className="hover:underline hover:font-bold text-black"><a href="https://uiuxweb.netlify.app/">Web Designer</a></li>
             <li className="hover:underline hover:font-bold text-black"><a href="https://nurprotfolio.netlify.app/" target="_blank">Fronend Developer</a></li>
             <li className="hover:underline hover:font-bold text-black"><a href="https://funcunalcalculator.netlify.app/" target="_blank">Programming</a></li>
-            <li className="hover:underline hover:font-bold text-black"><a href="https://nur-expressbd.netlify.app/" target="_blank">SEO</a></li>
+            <li className="hover:underline hover:font-bold text-black"><a href="https://nurprotfolio.netlify.app/contact" target="_blank">SEO</a></li>
             <li className="hover:underline hover:font-bold text-black"><a href="https://bteb.gov.bd/site/page/a34671e3-a81c-4927-834f-19d6afc41217/Diploma-Level" target="_blank">Diploma</a></li>
           </ul>
         </div>
 
         {/* Contact Information */}
         <div>
-          <h3 className="font-semibold mb-4">Contact Info</h3>
+          <h3 className="font-bold mb-4">Contact Info</h3>
           <div className="flex items-center space-x-3 mb-3">
             <div className="p-2 bg-black text-white rounded-md">
               <FaWhatsapp />
@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="p-2 bg-black text-white rounded-md">
               <FiMail />
             </div>
-            <span className="text-sm text-gray-900 hover:underline hover:font-bold"><a href="mailto:mdnoyon621234@gmail.com" target="_blank">Send Mail</a></span>
+            <span className="text-sm text-gray-900 hover:underline hover:font-bold"><a href="mailto:adatalad.m.@gmail.com" target="_blank">Send Mail</a></span>
           </div>
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-black text-white rounded-md">
@@ -98,9 +98,9 @@ const Footer = () => {
       </div>
       
       {/* Copy Right */}
-      <hr className="mt-5 text-gray-400"/>
-      <div className="text-center text-black text-sm pt-2">
-        <button onClick={()=>navigate('/nurdev')} >&copy; Protect by Abdun Nur.</button>
+      <hr className=" text-gray-400"/>
+      <div className="text-center text-black font-semibold bg-blue-200/20 text-sm py-3">
+        <button onClick={()=>navigate('/nurdev')} className="cursor-pointer" >&copy; Protect by Abdun Nur.</button>
       </div>
     </footer>
   );

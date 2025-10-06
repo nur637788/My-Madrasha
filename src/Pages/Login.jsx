@@ -71,7 +71,7 @@ function Login() {
           </h2>
 
           {!isLogin && (
-            <form onSubmit={handleSignUp} className="space-y-3">
+            <form data-aos='zoom-in' onSubmit={handleSignUp} className="space-y-3">
               <input
                 type="text"
                 placeholder="First Name"
@@ -117,7 +117,7 @@ function Login() {
           )}
 
           {isLogin && (
-            <form id="singup" onSubmit={handleLogin} className="space-y-3">
+            <form data-aos='zoom-in' id="singup" onSubmit={handleLogin} className="space-y-3">
               <input
                 type="email"
                 placeholder="Email"
