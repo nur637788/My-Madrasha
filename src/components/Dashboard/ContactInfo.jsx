@@ -1,12 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { db } from "../../Firebase/firebaseInfo";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 function ContactInfo() {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        const savedMessages = JSON.parse(localStorage.getItem("contactMessages")) || [];
-        setMessages(savedMessages);
+        const fetchMessages = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, "contactMessages"));
+                const msgs = querySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }));
+                setMessages(msgs);
+            } catch (error) {
+                console.error("Error fetching messages:", error);
+            }
+        };
+        fetchMessages();
     }, []);
+
+    const handleDelete = async (id) => {
+        if (!window.confirm("Are you sure to delete this message?")) return;
+        try {
+            await deleteDoc(doc(db, "contactMessages", id));
+            setMessages(messages.filter(msg => msg.id !== id));
+        } catch (error) {
+            console.error("Delete failed:", error);
+        }
+    };
 
     return (
         // Contact Messages
@@ -22,6 +45,7 @@ function ContactInfo() {
                                 <th className="p-2 border border-black">Name</th>
                                 <th className="p-2 border border-black">Email</th>
                                 <th className="px-20 border border-black">Message</th>
+                                <th className="p-2 border border-black">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,6 +54,14 @@ function ContactInfo() {
                                     <td className="px-2 py-1 border whitespace-nowrap">{m.name}</td>
                                     <td className="p-2 border">{m.email}</td>
                                     <td className="p-2 border">{m.message}</td>
+                                    <td className="p-2 border">
+                                        <button
+                                            onClick={() => handleDelete(m.id)}
+                                            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700"
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>

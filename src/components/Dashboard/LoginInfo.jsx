@@ -1,31 +1,41 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { db } from "../../Firebase/firebaseInfo";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 function LoginInfo() {
     const [users, setUsers] = useState([]);
 
-
-    // ✅ Page load হলে users আনবে localStorage থেকে
+    // ✅ Firestore থেকে user data আনা
     useEffect(() => {
-        const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
-        setUsers(savedUsers);
+        const fetchUsers = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, "users"));
+                const usersData = querySnapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }));
+                setUsers(usersData);
+            } catch (error) {
+                console.error("Error fetching users:", error);
+            }
+        };
+        fetchUsers();
     }, []);
 
-    // ✅ Delete user function
-    const handleDelete = (index) => {
+    // ✅ User Delete করা Firestore থেকে
+    const handleDelete = async (id) => {
         const confirmDelete = confirm("⚠️ Are you sure you want to delete this user?");
         if (!confirmDelete) return;
 
-        // user বাদ দেওয়া
-        const updatedUsers = [...users];
-        updatedUsers.splice(index, 1);
-
-        // localStorage update করা
-        localStorage.setItem("users", JSON.stringify(updatedUsers));
-        setUsers(updatedUsers);
-
-        alert("🗑️ User deleted successfully!");
+        try {
+            await deleteDoc(doc(db, "users", id));
+            setUsers(users.filter((user) => user.id !== id));
+            alert("🗑️ User deleted successfully!");
+        } catch (error) {
+            console.log("Some Error", error)
+            alert("❌ Failed to delete user!");
+        }
     };
-
 
     return (
         <div className="min-h-screen bg-gray-100 py-10 px-5 mt-5">

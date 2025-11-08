@@ -32,7 +32,7 @@ const Home = () => {
         </div>
 
         {/* 3 Buttons */}
-        <div data-aos='zoom-in' className='grid grid-cols-2 md:grid-cols-3  gap-2'>
+        <div data-aos='zoom-in' className='flex flex-wrap  gap-2'>
           <button onClick={() => navigate('/headmassage')} className="px-4 py-2 mt-5 bg-pink-500 w-fit hover:bg-pink-800 hover:font-bold hover:scale-95 text-white rounded shadow-lg transition duration-300 cursor-pointer">
             Massage of Head
           </button>

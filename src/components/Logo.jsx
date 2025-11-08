@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom'
 
 const LogoImg = () => {
   return (
-    <section className='mt-20'>
-    <div className="max-w-4xl mx-auto p-6 text-center mt-15">
-        <Link to="/" className="text-blue-500 underline hover:text-blue-700 hover:font-bold">← Go Back</Link>
-      </div>
-    <div className='m-auto px-2'>
-      <img className='bg-gray-200 m-auto object-cover  rounded' src="/image/logo.jpg"  alt="Adatala Dakhil Madrasha Logo" />
-    </div>
+    <section className=' min-h-screen flex flex-col items-center justify-center'>
+      <p><Link to='/' className='mx-2 bg-red-500 px-2 py-1 rounded hover:bg-red-600 '>← Back</Link>
+        <div className='m-auto px-2 mt-5'>
+          <img className='bg-gray-200 m-auto object-cover  rounded' src="/image/logo.jpg" alt="Adatala Dakhil Madrasha Logo" />
+        </div>
+      </p>
     </section>
   )
 }

@@ -41,7 +41,7 @@ function Header() {
 
       {/* Mobile Dropdown Menu */}
       {open && (
-        <div className=" md:hidden flex flex-row items-center justify-center gap-3 pb-1  border-t border-gray-100 bg-gray-100/60">
+        <div className=" md:hidden flex flex-row items-center justify-center gap-1 pb-1  border-t border-gray-100 bg-gray-100/60">
           <NavLink className='text-white border bg-black rounded px-1 hover:text-blue-500 hover:font-bold transition duration-500' to="/" onClick={() => setOpen(false)}>Home</NavLink>
           <NavLink className='text-white border bg-black rounded px-1 hover:text-blue-500 hover:font-bold transition duration-500' to="/about" onClick={() => setOpen(false)}>About</NavLink>
           <NavLink className='text-white border bg-black rounded px-1 hover:text-blue-500 hover:font-bold transition duration-500' to="/teachers" onClick={() => setOpen(false)}>Teachers</NavLink>

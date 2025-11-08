@@ -2,26 +2,25 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaYoutube, FaEnvelope, FaWhatsapp, FaTwitter } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-import Teachers from './../Pages/Teachers';
 
 
 const Footer = () => {
   const navigate = useNavigate();
   return (
     <footer className="bg-blue-100">
-      <div data-aos='fade-up' className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 px-6 py-5">
+      <div data-aos='fade-up' className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 px-4 md:px-10 py-3">
         {/* Left Section */}
         <div>
-          <div className="flex gap-2 items-center space-x-2">
+          <div className="flex flex-col gap-2 space-x-2">
             <img onClick={() => navigate('/logo')}
               src="/image/logo.jpg"
               alt="Adatala Dakhil Madrasha Logo"
-              className="w-20 md:w-15 h-20 md:h-15 bg-gray-100 rounded-full m-auto cursor-pointer"
+              className="w-15 h-15 bg-gray-100 rounded-full  cursor-pointer"
             />
-            <h2 className="text-lg font-bold hidden md:block">Adatala Darul Hedayat Dakhil Madrasha</h2>
+            <h2 className="text-lg font-bold text-start ">Adatala Darul Hedayat Dakhil Madrasha</h2>
           </div>
           {/* Socil Link */}
-          <h3 className="mt-4 font-semibold">Follow Now</h3>
+          <h3 className="mt-2 font-semibold">Follow Now</h3>
           <div className="flex space-x-3 mt-2">
             <a href="http://www.facebook.com/nur637788/" target="_blank" className="p-2 bg-black text-white rounded-md hover:bg-blue-300">
               <FaFacebookF />
@@ -44,7 +43,7 @@ const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h3 className="font-bold mb-4">Useful Links</h3>
+          <h3 className="font-bold mb-2">Useful Links</h3>
           <ul className="space-y-2 text-sm text-gray-900 ">
             <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/about')} className="cursor-pointer">About Us</button></li>
             <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/teachers')} className="cursor-pointer">Teachers</button></li>
@@ -59,7 +58,7 @@ const Footer = () => {
 
         {/*  Categories */}
         <div>
-          <h3 className="font-bold mb-4">Categories</h3>
+          <h3 className="font-bold mb-2">Categories</h3>
           <ul className="space-y-2 text-sm text-gray-900">
             <li className="hover:underline hover:font-bold text-black"><a href="https://nur637788protfolio.netlify.app/" target="_blank">Web Developer</a></li>
             <li className="hover:underline hover:font-bold text-black"><a href="https://uiuxweb.netlify.app/">Web Designer</a></li>
@@ -72,7 +71,7 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div>
-          <h3 className="font-bold mb-4">Contact Info</h3>
+          <h3 className="font-bold mb-2">Contact Info</h3>
           <div className="flex items-center space-x-3 mb-3">
             <div className="p-2 bg-black text-white rounded-md">
               <FaWhatsapp />

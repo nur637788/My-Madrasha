@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FiPhone, FiMapPin } from "react-icons/fi";
+import { db } from "../Firebase/firebaseInfo"
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,41 +11,33 @@ function Contact() {
   });
   const [loading, setLoading] = useState(false);
 
-  // ✅ পেজ লোড হলে পূর্বের ডেটা আনবে (ঐচ্ছিক — শেষ ইনপুট মনে রাখার জন্য)
-  useEffect(() => {
-    const savedData = localStorage.getItem("contactForm");
-    if (savedData) {
-      setFormData(JSON.parse(savedData));
-    }
-  }, []);
-
-  // ✅ ইনপুট চেঞ্জ হ্যান্ডলার
+  // ইনপুট চেঞ্জ হ্যান্ডলার
   const handleChange = (e) => {
-    const newFormData = { ...formData, [e.target.name]: e.target.value };
-    setFormData(newFormData);
-    localStorage.setItem("contactForm", JSON.stringify(newFormData)); // auto-save
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ ফর্ম সাবমিট
-  const handleSubmit = (e) => {
+  // ফর্ম সাবমিট
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      // Firestore-এ ডেটা যোগ
+      await addDoc(collection(db, "contactMessages"), {
+        ...formData,
+        createdAt: serverTimestamp(),
+      });
 
-      // ✅ Contact Messages LocalStorage এ জমা করো
-      const allMessages = JSON.parse(localStorage.getItem("contactMessages")) || [];
-      allMessages.push(formData);
-      localStorage.setItem("contactMessages", JSON.stringify(allMessages));
-
-      // ✅ সফল alert
       alert("✅ Message sent successfully!");
 
-      // ✅ Input ফিল্ড খালি করো
+      // ইনপুট ফিল্ড খালি করা
       setFormData({ name: "", email: "", message: "" });
-      localStorage.removeItem("contactForm"); // পুরনো টেম্প ডেটা মুছে ফেলা
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("❌ Failed to send message!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -107,17 +101,14 @@ function Contact() {
               Adatala Darul Hedayat Dakhil Madrasha, Naogaon, Rajshahi
             </h1>
             <p>
-              If you need address, email and phone number of Adatala Darul Hedayat
-              Dakhil Madrasha, please feel free to contact them using the
-              information below. Additionally, you can locate them on the map
-              displayed on this webpage.
+              If you need address, email and phone number of Adatala Darul Hedayat Dakhil Madrasha, please feel free to contact them using the information below. Additionally, you can locate them on the map displayed on this webpage.
             </p>
             <div className="flex items-center space-x-2 mb-3">
               <div className="p-2 text-black rounded-md">
                 <FiPhone />
               </div>
               <span className="text-sm text-black hover:underline hover:font-bold">
-                <a href="tel:+88 01798090414">+88 01798090414</a>
+                <a href="tel:+8801798090414">+88 01798090414</a>
               </span>
             </div>
             <div className="flex items-center space-x-3">

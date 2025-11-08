@@ -8,7 +8,7 @@ function About() {
   return (
 
     <div>
-      <div className='mt-20 mx-10'>
+      <div className='mt-20 mx-5'>
         <header className="mb-7 text-center underline">
           <h2 className=" text-4xl font-bold text-pink-800">This <span className='text-blue-600'>About</span></h2>
         </header>
