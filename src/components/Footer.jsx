@@ -12,15 +12,15 @@ const Footer = () => {
       <div data-aos='fade-up' className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 px-6 py-5">
         {/* Left Section */}
         <div>
-          <div className="flex items-center space-x-2">
-            <img onClick={()=>navigate('/logo')} 
+          <div className="flex gap-2 items-center space-x-2">
+            <img onClick={() => navigate('/logo')}
               src="/image/logo.jpg"
               alt="Adatala Dakhil Madrasha Logo"
-              className="w-15 h-15 bg-gray-100 rounded-full "
+              className="w-20 md:w-15 h-20 md:h-15 bg-gray-100 rounded-full m-auto cursor-pointer"
             />
-            <h2 className="text-lg font-bold">Adatala Darul Hedayat Dakhil Madrasha</h2>
+            <h2 className="text-lg font-bold hidden md:block">Adatala Darul Hedayat Dakhil Madrasha</h2>
           </div>
-            {/* Socil Link */}
+          {/* Socil Link */}
           <h3 className="mt-4 font-semibold">Follow Now</h3>
           <div className="flex space-x-3 mt-2">
             <a href="http://www.facebook.com/nur637788/" target="_blank" className="p-2 bg-black text-white rounded-md hover:bg-blue-300">
@@ -35,7 +35,7 @@ const Footer = () => {
               <FaTwitter />
             </a>
 
-              <a  href="#" className="p-2 bg-black text-white rounded-md hover:bg-blue-300">
+            <a href="#" className="p-2 bg-black text-white rounded-md hover:bg-blue-300">
               <FaYoutube />
             </a>
 
@@ -46,12 +46,12 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4">Useful Links</h3>
           <ul className="space-y-2 text-sm text-gray-900 ">
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/about')} className="cursor-pointer">About Us</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/teachers')} className="cursor-pointer">Teachers</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/contact')} className="cursor-pointer">Contact Us</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/login')} className="cursor-pointer">Login</button></li>
-            <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/team')} className="cursor-pointer">Team</button></li>
-             <li className="hover:underline hover:font-bold text-black"><button onClick={()=>navigate('/privacypolicy')} className="cursor-pointer">Privacy & Policy</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/about')} className="cursor-pointer">About Us</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/teachers')} className="cursor-pointer">Teachers</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/contact')} className="cursor-pointer">Contact Us</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/login')} className="cursor-pointer">Login</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/team')} className="cursor-pointer">Team</button></li>
+            <li className="hover:underline hover:font-bold text-black"><button onClick={() => navigate('/privacypolicy')} className="cursor-pointer">Privacy & Policy</button></li>
 
 
           </ul>
@@ -91,16 +91,16 @@ const Footer = () => {
             </div>
             <span className="text-sm text-gray-900 hover:underline hover:font-bold">
               <a href="https://www.google.com/maps/place/ADATOLA+DAKHIL+MADRASA/@25.1546539,88.4619878,17z/data=!4m14!1m7!3m6!1s0x39fb139373ba01eb:0x429dcafe8d26a87!2sAdatala+Central+Mosque!8m2!3d25.1541344!4d88.4582703!16s%2Fg%2F11s17n7m3_!3m5!1s0x39fb13a983ae7b45:0x329eebc0182dfbaf!8m2!3d25.1539398!4d88.4645691!16s%2Fg%2F11p00xblfq?hl=hi&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Adatala 199, Sapahar, Naogaon</a>
-              
+
             </span>
           </div>
         </div>
       </div>
-      
+
       {/* Copy Right */}
-      <hr className=" text-gray-400"/>
+      <hr className=" text-gray-400" />
       <div className="text-center text-black font-semibold bg-blue-200/20 text-sm py-3">
-        <button onClick={()=>navigate('/nurdev')} className="cursor-pointer" >&copy; Protect by Abdun Nur.</button>
+        <button onClick={() => navigate('/nurdev')} className="cursor-pointer" >&copy; Protect by Abdun Nur.</button>
       </div>
     </footer>
   );

@@ -129,8 +129,6 @@ const GetStart = () => {
     </div>
             
     </div>
-
-      <Footer />
     </div>
   );
 };

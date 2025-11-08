@@ -5,10 +5,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Animation
-    AOS.init({
-      duration: 2000, 
-      once: true,     
-    });
+AOS.init({
+  duration: 2000,
+  once: true,
+});
 
 
 import {
@@ -28,6 +28,8 @@ import SSCResult from './components/SSCResult.jsx';
 import NurDev from './components/NurDev.jsx';
 import Team from './components/Team.jsx';
 import PrivacyPolicy from './components/PrivecyPolicy.jsx';
+import Admin from './components/Dashboard/Admin.jsx'
+import Terms from './components/TermsAndCondition.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:<Home></Home>,
+        element: <Home></Home>,
       },
 
       {
@@ -46,48 +48,56 @@ const router = createBrowserRouter([
 
       {
         path: "/teachers",
-        element:<Teachers></Teachers>,
+        element: <Teachers></Teachers>,
       },
       {
         path: "/Contact",
-        element:<Contact></Contact>
+        element: <Contact></Contact>
       },
 
-      { 
+      {
         path: "/login",
         element: <Login></Login>,
       },
 
       // Button Link
-        { 
+      {
         path: "/getstart",
         element: <GetStart></GetStart>,
       },
-      { 
+      {
         path: "/logo",
         element: <Logo></Logo>,
       },
-      { 
+      {
         path: "/headmassage",
         element: <HeadMassege></HeadMassege>,
       },
-      { 
+      {
         path: "/sscresult",
         element: <SSCResult></SSCResult>,
       },
-      { 
+      {
         path: "/nurdev",
         element: <NurDev></NurDev>,
       },
-       { 
+      {
         path: "/team",
         element: <Team></Team>,
       },
-       { 
+      {
         path: "/privacypolicy",
         element: <PrivacyPolicy></PrivacyPolicy>,
       },
-       
+      {
+        path: "/admin",
+        element: <Admin></Admin>,
+      },
+      {
+        path: "/terms",
+        element: <Terms></Terms>,
+      },
+
     ],
   },
 ]);
